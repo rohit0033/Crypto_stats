@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/api', cryptoRoutes);
 
 // Schedule background job
-cron.schedule('0 */2 * * * *', fetchCryptoData);
+cron.schedule('0 */2 * * * ', fetchCryptoData);
 
 // Start the server
 app.listen(port, () => {
